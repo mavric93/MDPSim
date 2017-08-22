@@ -91,7 +91,7 @@ export function getNeighbours(point, map){
 		neighbours.push(topNeighbour);
 	}
 	//check bottom
-	if(bottomNeighbour >= 0 && map[bottomNeighbour] != "#000000"){
+	if(bottomNeighbour > 14 && map[bottomNeighbour] != "#000000"){
 		neighbours.push(bottomNeighbour);
 	}
 	//check left
@@ -157,5 +157,5 @@ function reconstruct_path(cameFrom, current){
 		path.push(current);
 		current = cameFrom[current];
 	}
-    return path;
+    return path.reverse();
 }
