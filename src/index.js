@@ -132,6 +132,19 @@ class Board extends React.Component {
 		defaultArray[268]="#FFAA00";
 		defaultArray[269]="#FFAA00";
 		
+		//set new waypoints
+		defaultArray[this.state.waypoint] = "#00FF00";
+		defaultArray[this.state.waypoint-1] = "#AAFFAA";
+		defaultArray[this.state.waypoint+1] = "#AAFFAA";
+		
+		defaultArray[this.state.waypoint+14] = "#AAFFAA";
+		defaultArray[this.state.waypoint+15] = "#AAFFAA";
+		defaultArray[this.state.waypoint+16] = "#AAFFAA";
+		
+		defaultArray[this.state.waypoint-14] = "#AAFFAA";
+		defaultArray[this.state.waypoint-15] = "#AAFFAA";
+		defaultArray[this.state.waypoint-16] = "#AAFFAA";
+		
 		this.setState({squares:defaultArray});		
 		
 	}
